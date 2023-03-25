@@ -1,0 +1,31 @@
+
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+
+  form{
+    width: 50%;
+    border: 1px solid black;
+    padding: 2rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    div{
+      width: 90%;
+    }
+  }
+
+}
+
+.display-image{
+ 
+    width: 14%;
+    margin-right: 5px;
+}
