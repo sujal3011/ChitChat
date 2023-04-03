@@ -6,12 +6,12 @@ import {auth} from '../firebase'
 export const AuthContext=createContext();
 
 export const AuthContextProvider=({children})=>{
-    const [currentUser, setCurrentUser] = useState({});
+    const [currentUser, setCurrentUser] = useState({})
 
     useEffect(()=>{
         const unsub = onAuthStateChanged(auth, (user) => {
-           setCurrentUser(user);
-           console.log(user);
+            setCurrentUser(user);
+            console.log(user);
           });
         
         return ()=>{  //Using cleanup function with useEffect hook
@@ -20,7 +20,7 @@ export const AuthContextProvider=({children})=>{
     },[]);
 
 return (
-    <AuthContext.Provider value={currentUser}>
+    <AuthContext.Provider value={{currentUser}}>
         {children}
     </AuthContext.Provider>
   );
